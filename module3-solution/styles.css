@@ -1,0 +1,73 @@
+#header-navbar {
+  background-color: grey;
+  border: 4px solid black;
+}
+
+.container-fluid{
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-name {
+  font-size: 35px;
+  color: black;
+  padding-left: 20px;
+}
+
+#navbar-list {
+  font-size: 25px;
+  background-color: white;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-default .navbar-toggle {
+  float: right;
+  border: 2px solid black;
+  margin-right: 25px;
+}
+
+.navbar-default .navbar-toggle .icon-bar{
+  background-color: black;
+}
+
+.nav {
+  margin: 0;
+  padding: 0;
+}
+
+
+.main-title {
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+#Chicken {
+  text-align: center;
+  color: black;
+  font-size: 1.75em;
+  font-weight: 500;
+}
+
+.row {
+  margin: 20px;
+}
+
+.content-box{
+  margin: 20px;
+  width: auto;
+  height: auto;
+  color: black;
+  background-color: gray;
+  padding: 20px;
+}
+
+.list-item{
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  background-color: white;
+  border-bottom: 2px solid black;
+}
