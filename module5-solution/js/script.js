@@ -17,7 +17,7 @@ var homeHtmlUrl = "snippets/home-snippet.html";
 var allCategoriesUrl = "https://coursera-jhu-default-rtdb.firebaseio.com/categories.json";
 var categoriesTitleHtml = "snippets/categories-title-snippet.html";
 var categoryHtml = "snippets/category-snippet.html";
-var menuItemsUrl = "https://coursera-jhu-default-rtdb.firebaseio.com/menu_items.json";
+var menuItemsUrl = "https://coursera-jhu-default-rtdb.firebaseio.com/menu_items/";
 var menuItemsTitleHtml = "snippets/menu-items-title.html";
 var menuItemHtml = "snippets/menu-item.html";
 
@@ -99,8 +99,10 @@ function buildAndShowHomeHTML (categories) {
       // TODO: STEP 2: Here, call chooseRandomCategory, passing it retrieved 'categories'
       // Pay attention to what type of data that function returns vs what the chosenCategoryShortName
       // variable's name implies it expects.
-      var chosenCategoryShortName = chooseRandomCategory (categories)
       
+      var chosenCategoryShortName = chooseRandomCategory (categories)
+      var shortnameprop = "'" + chosenCategoryShortName.short_name + "'" 
+      console.log("Short name: " + shortnameprop)
 
       // TODO: STEP 3: Substitute {{randomCategoryShortName}} in the home html snippet with the
       // chosen category from STEP 2. Use existing insertProperty function for that purpose.
@@ -112,17 +114,18 @@ function buildAndShowHomeHTML (categories) {
       // $dc.loadMenuItems('L')
       // Hint: you need to surround the chosen category short name with something before inserting
       // it into the home html snippet.
-      
-      var shortnameprop = "'" + chosenCategoryShortName.short_name + "'"
-      console.log("Short Name:" + shortnameprop)
-      var homeHtmlToInsertIntoMainPage = insertProperty(homeHtml, "randomCategoryShortName", shortnameprop);
+      //
+      var homeHtmlToInsertIntoMainPage = insertProperty (
+          homeHtml,
+          "randomCategoryShortName",
+          shortnameprop)
       console.log("homeHtml..." + homeHtmlToInsertIntoMainPage)
-
 
       // TODO: STEP 4: Insert the produced HTML in STEP 3 into the main page
       // Use the existing insertHtml function for that purpose. Look through this code for an example
       // of how to do that.
-      
+      // ....
+
       insertHtml("#main-content", homeHtmlToInsertIntoMainPage);
 
     },
